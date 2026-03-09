@@ -14,7 +14,7 @@ export default function BookCard({ book }: { book: Book }) {
         {/* Square Image 1:1 */}
         <div className='relative w-full aspect-square'>
           <Image
-            src={book.image ? book.image : "/images/loremipsum.jpg"}
+            src={book.image === "" ? "/images/loremipsum.jpg" : book.image}
             alt={book.title}
             fill
             className='object-cover'
